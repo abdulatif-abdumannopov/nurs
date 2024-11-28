@@ -4,11 +4,11 @@ from django import forms
 class LoginForm(forms.Form):
     username = forms.CharField(max_length=40, widget=forms.TextInput(attrs={
         'class': 'form_field',
-        'placeholder': 'Username'
+        'placeholder': 'Имя'
     }))
     password = forms.CharField(widget=forms.PasswordInput(attrs={
         'class': 'form_field',
-        'placeholder': 'Password'
+        'placeholder': 'Пароль'
     }))
 class FeedbackForm(forms.ModelForm):
 
@@ -18,7 +18,7 @@ class FeedbackForm(forms.ModelForm):
         widgets = {
             'name': forms.TextInput(attrs={
                 'class': 'form_field_feedback',
-                'placeholder': 'Name',
+                'placeholder': 'Имя',
             }),
             'email': forms.TextInput(attrs={
                 'class': 'form_field_feedback',
@@ -26,7 +26,7 @@ class FeedbackForm(forms.ModelForm):
             }),
             'text': forms.Textarea(attrs={
                 'class': 'form_text_field',
-                'placeholder': 'Your Message',
+                'placeholder': 'Текст',
             })
         }
 
@@ -39,13 +39,13 @@ class RegistrationForm(UserCreationForm):
         widget=forms.EmailInput(attrs={'class': 'form_field', 'placeholder': 'Email'})
     )
     username = forms.CharField(
-        widget=forms.TextInput(attrs={'class': 'form_field', 'placeholder': 'Username'})
+        widget=forms.TextInput(attrs={'class': 'form_field', 'placeholder': 'Имя'})
     )
     password1 = forms.CharField(
-        widget=forms.PasswordInput(attrs={'class': 'form_field', 'placeholder': 'Password'})
+        widget=forms.PasswordInput(attrs={'class': 'form_field', 'placeholder': 'Пароль'})
     )
     password2 = forms.CharField(
-        widget=forms.PasswordInput(attrs={'class': 'form_field', 'placeholder': 'Confirm Password'})
+        widget=forms.PasswordInput(attrs={'class': 'form_field', 'placeholder': 'Повторите Пароль'})
     )
 
     class Meta:

@@ -10,12 +10,15 @@
     <title>Login</title>
 </head>
 <body>
+<div class="logo__container">
+    <a href="{% url 'home' %}"><img src="{% static 'images/Untitled.svg' %}" alt="logo" class="logo__header"></a>
+    </div>
     <form method="Post" class="login_form">
         {% csrf_token %}
         {{ form.username }}
         {{ form.password }}
-        <button class="form_button">Login</button>
-        <span>or <a href="{% url 'registration' %}">create</a></span>
+        <button class="form_button">войти</button>
+        <span>или <a href="{% url 'registration' %}">создайте аккаунт</a></span>
     </form>
 </body>
 </html>

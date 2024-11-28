@@ -10,12 +10,17 @@
     <title>Login</title>
 </head>
 <body>
+<header>
+    <div class="logo__container">
+        <a href="{% url 'home' %}"><img src="{% static 'images/Untitled.svg' %}" alt="logo" class="logo__header"></a>
+    </div>
+</header>
     <form method="POST" class="login_form">
         {% csrf_token %}
         {{ form.name }}
         {{ form.email }}
         {{ form.text }}
-        <button class="form_button">Send</button>
+        <button class="form_button">Отправить</button>
     </form>
 </body>
 </html>
